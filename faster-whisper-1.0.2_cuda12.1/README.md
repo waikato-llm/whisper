@@ -14,10 +14,10 @@ Uses PyTorch 2.3.0, CUDA 12.1.
   docker login -u public -p public public.aml-repo.cms.waikato.ac.nz:443 
   ```
   
-* Create the following directories:
+* Create the following directory:
 
   ```bash
-  mkdir cache triton
+  mkdir cache
   ```
 
 * Launch docker container
@@ -29,16 +29,15 @@ Uses PyTorch 2.3.0, CUDA 12.1.
     --shm-size 8G \
     -v `pwd`:/workspace \
     -v `pwd`/cache:/.cache \
-    -v `pwd`/triton:/.triton \
     -it public.aml-repo.cms.waikato.ac.nz:443/pytorch/python-faster-whisper:1.0.2_cuda12.1
   ```
 
 ### Docker hub
   
-* Create the following directories:
+* Create the following directory:
 
   ```bash
-  mkdir cache triton
+  mkdir cache
   ```
 
 * Launch docker container
@@ -50,7 +49,6 @@ Uses PyTorch 2.3.0, CUDA 12.1.
     --shm-size 8G \
     -v `pwd`:/workspace \
     -v `pwd`/cache:/.cache \
-    -v `pwd`/triton:/.triton \
     -it waikatodatamining/python-faster-whisper:1.0.2_cuda12.1
   ```
 
