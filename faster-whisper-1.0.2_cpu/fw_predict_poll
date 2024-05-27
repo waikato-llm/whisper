@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python /opt/faster-whisper/predict_poll.py "$@"
