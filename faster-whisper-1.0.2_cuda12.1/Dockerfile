@@ -29,5 +29,5 @@ ENV LD_LIBRARY_PATH /usr/local/cuda-11/lib64
 ENV PYTHONPATH /opt/faster-whisper
 
 COPY bash.bashrc /etc/bash.bashrc
-COPY *.py /opt/faster-whisper
-COPY fw* /usr/bin
+COPY *.py /opt/faster-whisper/
+COPY fw* /usr/bin/
