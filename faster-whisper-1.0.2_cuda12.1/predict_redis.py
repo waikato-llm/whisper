@@ -1,4 +1,5 @@
 from datetime import datetime
+import io
 import traceback
 
 from predict_common import TRANSCRIPTION_FORMATS, TRANSCRIPTION_FORMAT_TEXT, load_model, transcribe
@@ -17,7 +18,8 @@ def process_audio(msg_cont):
     try:
         start_time = datetime.now()
 
-        transcription = transcribe(config.model, msg_cont.message['data'], beam_size=config.beam_size, transcription_format=config.prediction_format)
+        data = io.BytesIO(msg_cont.message['data'])
+        transcription = transcribe(config.model, data, beam_size=config.beam_size, transcription_format=config.transcription_format)
         msg_cont.params.redis.publish(msg_cont.params.channel_out, transcription)
 
         if config.verbose:
@@ -48,7 +50,7 @@ if __name__ == '__main__':
 
         config = Container()
         config.model = model
-        config.prediction_format = parsed.prediction_format
+        config.transcription_format = parsed.transcription_format
         config.beam_size = parsed.beam_size
         config.verbose = parsed.verbose
 
