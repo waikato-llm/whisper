@@ -2,7 +2,6 @@ test/
 cache/
 data/
 output/
-triton/
 .idea/
 *~
 *.swp
@@ -10,3 +9,5 @@ triton/
 *.mp3
 *.wav
 *.txt
+*.json
+predictions/
