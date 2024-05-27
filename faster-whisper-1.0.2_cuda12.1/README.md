@@ -127,6 +127,14 @@ docker run --rm --pull=always \
   pip freeze > requirements.txt
 ```
 
+## Scripts
+
+The following scripts are available:
+
+* `fw_predict_poll` - for applying a model to audio files (uses file-polling, calls `/opt/faster-whisper/predict_poll.py`)
+* `fw_predict_redis` - for applying a model to images (via [Redis](https://redis.io/) backend), 
+  add `--net=host` to the Docker options (calls `/opt/faster-whisper/predict_redis.py`)
+
 
 ## Permissions
 
