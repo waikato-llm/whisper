@@ -18,10 +18,16 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir faster-whisper==1.0.2
+RUN pip install --no-cache-dir \
+        "simple-file-poller>=0.0.9" \
+        redis \
+        "redis-docker-harness==0.0.4"
 
 # original path, which doesn't contain any CUDA libraries:
 # LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64
 ENV LD_LIBRARY_PATH /usr/local/cuda-11/lib64
+ENV PYTHONPATH /opt/faster-whisper
 
 COPY bash.bashrc /etc/bash.bashrc
-
+COPY *.py /opt/faster-whisper
+COPY fw* /usr/bin
