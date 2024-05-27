@@ -48,10 +48,10 @@ def transcribe(model, audio, beam_size=5, transcription_format=TRANSCRIPTION_FOR
             result.append({
                 "start": segment.start,
                 "end": segment.end,
-                "text": segment.text,
+                "text": segment.text.strip(),
             })
         else:
-            result.append(segment.text)
+            result.append(segment.text.strip())
     if transcription_format == TRANSCRIPTION_FORMAT_JSON:
         return json.dumps(result, indent=2)
     else:
