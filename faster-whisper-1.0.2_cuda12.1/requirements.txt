@@ -1,14 +1,33 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.1.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+   Use the NVIDIA Container Toolkit to start this container with GPU support; see
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
 anaconda-anon-usage @ file:///croot/anaconda-anon-usage_1710965072196/work
 archspec @ file:///croot/archspec_1709217642129/work
 asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
 astunparse==1.6.3
 async-timeout==4.0.3
 attrs @ file:///croot/attrs_1695717823297/work
-av==12.0.0
+av==12.2.0
 beautifulsoup4 @ file:///croot/beautifulsoup4-split_1681493039619/work
 boltons @ file:///croot/boltons_1677628692245/work
 Brotli @ file:///tmp/abs_ecyw11_7ze/croots/recipe/brotli-split_1659616059936/work
-certifi @ file:///croot/certifi_1707229174982/work/certifi
+certifi==2024.7.4
 cffi @ file:///croot/cffi_1700254295673/work
 chardet @ file:///home/builder/ci_310/chardet_1640804867535/work
 charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
@@ -22,7 +41,7 @@ conda-package-handling @ file:///croot/conda-package-handling_1690999929514/work
 conda_index @ file:///croot/conda-index_1706633791028/work
 conda_package_streaming @ file:///croot/conda-package-streaming_1690987966409/work
 cryptography @ file:///croot/cryptography_1710350347627/work
-ctranslate2==4.3.0
+ctranslate2==4.3.1
 decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
 distro @ file:///croot/distro_1701455004953/work
 dnspython==2.6.1
@@ -34,7 +53,7 @@ filelock @ file:///croot/filelock_1700591183607/work
 flatbuffers==24.3.25
 fsspec==2024.3.1
 gmpy2 @ file:///tmp/build/80754af9/gmpy2_1645455533097/work
-huggingface-hub==0.23.1
+huggingface-hub==0.23.4
 humanfriendly==10.0
 hypothesis==6.100.1
 idna @ file:///croot/idna_1666125576474/work
@@ -58,7 +77,7 @@ more-itertools @ file:///croot/more-itertools_1700662129964/work
 mpmath @ file:///croot/mpmath_1690848262763/work
 networkx @ file:///croot/networkx_1690561992265/work
 numpy @ file:///croot/numpy_and_numpy_base_1708638617955/work/dist/numpy-1.26.4-cp310-cp310-linux_x86_64.whl#sha256=d8cd837ed43e87f77e6efaa08e8de927ca030a1c9c5d04624432d6fb9a74a5ee
-onnxruntime==1.18.0
+onnxruntime==1.18.1
 optree==0.11.0
 packaging @ file:///croot/packaging_1710807400464/work
 parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
@@ -68,7 +87,7 @@ pkginfo @ file:///croot/pkginfo_1679431160147/work
 platformdirs @ file:///croot/platformdirs_1692205439124/work
 pluggy @ file:///tmp/build/80754af9/pluggy_1648024709248/work
 prompt-toolkit @ file:///croot/prompt-toolkit_1704404351921/work
-protobuf==5.27.0
+protobuf==5.27.2
 psutil @ file:///opt/conda/conda-bld/psutil_1656431268089/work
 ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
 pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
@@ -80,7 +99,7 @@ PySocks @ file:///home/builder/ci_310/pysocks_1640793678128/work
 python-etcd==0.4.5
 pytz @ file:///croot/pytz_1695131579487/work
 PyYAML @ file:///croot/pyyaml_1698096049011/work
-redis==5.0.4
+redis==5.0.7
 redis-docker-harness==0.0.4
 referencing @ file:///croot/referencing_1699012038513/work
 requests @ file:///croot/requests_1707355572290/work
