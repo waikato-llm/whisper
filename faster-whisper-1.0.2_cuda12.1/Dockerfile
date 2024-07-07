@@ -17,7 +17,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir faster-whisper==1.0.2
+RUN pip install --no-cache-dir faster-whisper==1.0.2 "certifi>=2024.07.04"
 RUN pip install --no-cache-dir \
         "simple-file-poller>=0.0.9" \
         redis \
